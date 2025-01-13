@@ -1,0 +1,82 @@
+{% extends 'base.html' %} {% block content %}
+<style>
+  li {
+    display: flex;
+  }
+  h1 {
+    padding-right: 10px;
+    margin: 0;
+    gap: 1rem;
+  }
+  h3 {
+    padding: 0 0.5rem;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .grid-container {
+    /* columns */
+  }
+  .card {
+    
+  }
+
+  @media (max-width: 680px) {
+    body {
+      padding: 0;
+    }
+    a {
+      max-width: 300px;
+      text-wrap: wrap;
+      flex-wrap: wrap;
+      word-break: break-all;
+    }
+  }
+</style>
+<header>
+  <div class="grid-container" style="text-decoration: none">
+    <div class="card">
+      <h1>Umów wizytę,</h1>
+      <h1>skontaktuj się ze mną przez:</h1>
+      <ul>
+        <li style="margin-top: 20px; margin-bottom: 0">
+          <h3>Telefon:</h3>
+          <a href="tel:+48663531613" style="text-decoration: none"
+            ><h3>663 531 613</h3></a
+          >
+        </li>
+        <li>
+          <h3>Email:</h3>
+          <h3>
+            <a href="email" style="text-decoration: none"
+              >wirtualnygabinetzmiana@gmail.com</a
+            >
+          </h3>
+        </li>
+
+      </ul >
+      <h1
+      style="text-align: left;
+      padding-left: 2.2rem;"
+      >
+      Lokalizacja:</h1>
+      
+      <ul>
+      <li>
+        <h3>
+          <a
+            href="https://www.google.com/maps/place//@52.2286186,21.0155111,17.48z/data=!4m6!1m5!3m4!2zNTLCsDEzJzQyLjYiTiAyMcKwMDAnNTYuNSJF!8m2!3d52.2284927!4d21.0156822?entry=ttu&g_ep=EgoyMDI1MDEwNy4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+          >
+            Warszawa - Ursynów
+          </a>
+        </h3>
+      </li>
+    </ul>
+    </div>
+  </div>
+</header>
+{% endblock %}

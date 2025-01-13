@@ -1,0 +1,129 @@
+{% extends "base.html" %} {% block title %}Strona Główna{% endblock %} {% block
+content %}
+<style>
+  p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .nav-link a {
+    color: goldenrod;
+    display: inline;
+  }
+  a {
+    display: inline;
+  }
+
+  h2 {
+    padding-top: 1rem;
+  }
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  @media (max-width: 610px) {
+    .main {
+      /* padding: 0 0; */
+    }
+    @media (max-width: 490px) {
+      body {
+        padding: 0 0;
+      }
+    }
+  }
+</style>
+
+<div class="background-layout"></div>
+<div class="quote" id="quote">
+  <blockquote>
+    Pewnego razu uczeń zapytał mistrza: "Jak długo trzeba oczekiwać na zmiany?"
+    Mistrz odpowiedział: "Jak chcesz oczekiwać - to długo".
+  </blockquote>
+</div>
+
+<div class="grid-container">
+  <div class="card"
+  style="background: transparent; border: none;">
+    <div class="profile">
+      <img
+        src="{{ url_for('static', filename='images/profile.jpeg') }}"
+        alt="Profilowe"
+      />
+      <h2>Marta Bucholc - Psycholog, certyfikowana specjalistka psychoterapii uzależnień i rodzin osób uzależnionych - Terapia osób dorosłych i młodzieży.</h2>
+    </div>
+
+    <!-- <div class="experience">
+      <hr />
+      <h2>
+        <a
+          class="nav-link"
+          href="/o-mnie-marta-bucholc"
+          onmouseover="this,style.color='goldenrod'"
+          onmouseout="this.style.color=''"
+        >
+          Kim jestem?</a
+        >
+      </h2>
+      
+      <p style="padding-top: 2rem;">
+        Nazywam się Marta Bucholc i specjalizuję się w psychoterapii więcej na
+        mój temat znajdziesz w zakładce "<a
+          class="nav-link"
+          href="/o-mnie-marta-bucholc"
+          style="display: inline; font-weight: bold"
+          onmouseover="this.style.color='goldenrod'"
+          onmouseout="this.style.color=''"
+          >O Mnie</a
+        >" lub na stronie
+        <a
+          class="nav-link"
+          href="https://www.znanylekarz.pl/marta-bucholc/psycholog-psychoterapeuta/warszawa"
+          style="display: inline; font-weight: bold"
+          onmouseover="this.style.color='goldenrod'"
+          onmouseout="this.style.color=''"
+          target="_blank"
+          >www.znanylekarz.pl</a
+        >
+      </p>
+
+      <hr />
+      <h2>
+        <a
+          class="nav-link"
+          href="/dlaczego-terapia-wazna"
+          onmouseover="this,style.color='goldenrod'"
+          onmouseout="this.style.color=''"
+          >Dlaczego terapia jest ważna?</a
+        >
+      </h2>
+
+      <p style="padding-top: 2rem">
+        Terapia jest niezwykle istotnym elementem zdrowia psychicznego i
+        emocjonalnego, który pozwala nie tylko na poprawę samopoczucia, ale
+        również na głębsze zrozumienie siebie oraz swoich trudności. Jako
+        magister psychologii i psychoterapeuta z wieloletnim doświadczeniem,
+        wiem, jak duży wpływ na jakość życia ma odpowiednia pomoc w trudnych
+        momentach.
+      </p>
+      <p>
+        Więcej w zakładce "
+        <a
+          class="nav-link"
+          href="/o-mnie-marta-bucholc"
+          style="display: inline; font-weight: bold"
+          onmouseover="this.style.color='goldenrod'"
+          onmouseout="this.style.color=''"
+          >Dlaczego terapia?</a
+        >"...
+      </p>
+    </div>
+  </div> -->
+</div>
+
+{% endblock %}

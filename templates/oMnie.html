@@ -1,0 +1,112 @@
+{% extends 'base.html' %} {% block content %}
+<header>
+  <style>
+    h1 {
+      text-align: center;
+    }
+    h5 {
+      text-align: left;
+    }
+    ul {
+      text-align: left;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+    li {
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 799px) {
+      .grid-container {
+        grid-template-columns: repeat(1, 300px);
+      }
+    }
+  </style>
+</header>
+
+<div
+  class="grid-container"
+  style="grid-template-columns: repeat(auto-fit, minmax(600px, 800px))"
+>
+  <div class="card">
+    <h2>Kim jestem?</h2>
+    <hr>
+    <p>
+      Pracuję jako terapeutka, psycholog od 20 lat. Mama trójki dzieci. Kochająca przyrodę i zwierzęta.
+    </p>
+  </div>
+
+
+  <div class="card">
+    <h2>Doświadczenie</h2>
+    <hr>
+    <p>doświadczenie zdobyła w ośrodkach stacjonarnych readaptacyjno-rechabilitacyjnych i poradniach zdrowia psychicznego, obecnie ma własną praktykę w Warszawie</p>
+  </div>
+
+  <div class="card">
+    <h2>Edukacja</h2>
+    <hr>
+    <strong><p style="text-align: left;">Absolwentka:</p></strong>
+    <ul>
+      <li>Uniwersytetu Warszawskiego,</li>
+      <li>Instytutu psychologii Zdrowia,</li>
+      <li>Synapsiss terapii rodzin,</li>
+    </ul>
+    <p style="text-align: left;">oraz wielu szkoleń dotyczących zaburzeń więzi, DDA i uzależnień</p>
+  </div>
+
+  <div class="card">
+    <h2>Leczę z chorób takich jak</h2>
+    <hr>
+    <ul>
+      <li>Zaburzenia lękowe</li>
+      <li>Zaburzenia emocjonalne</li>
+      <li>Depresja</li>
+      <li>Zaburzenia nastroju</li>
+      <li>Uzależnienia i behawioralne</li>
+    </ul>
+  </div>
+
+  <!-- <div class="card">
+    <h2>Doświadczenie</h2>
+    <hr>
+    <ul>
+      <li>
+        Praca z osobami dorosłymi z zaburzeniami osobowości (Prywatny Gabinet na
+        Ursynowie).
+      </li>
+      <li>
+        Terapia osób uzależnionych od substancji psychoaktywnych i uzależnień
+        behawioralnych:
+        <ul>
+          <li>Hospicjum Św. Krzyża w Warszawie.</li>
+          <li>Oddział Dzienny Uzależnień PL WAT.</li>
+          <li>Prywatny Gabinet.</li>
+        </ul>
+      </li>
+    </ul>
+  </div> -->
+
+
+  <div class="card">
+    <h2>Podejście terapeutyczne</h2>
+    <hr>
+    <ul>
+      <li>
+        Wspieram w odnalezieniu harmonii między emocjami, potrzebami i myślami.
+      </li>
+      <li>
+        Wierzę, że brak spójności prowadzi do poszukiwania niesprzyjających
+        rozwiązań, które mogą szkodzić zdrowiu psychicznemu i fizycznemu.
+      </li>
+      <li>
+        Relacja terapeutyczna oparta na akceptacji i zrozumieniu pozwala
+        odnaleźć spokój, odbudować poczucie własnej wartości i wprowadzić
+        pozytywne zmiany w życiu.
+      </li>
+    </ul>
+  </div>
+</div>
+
+{% endblock %}

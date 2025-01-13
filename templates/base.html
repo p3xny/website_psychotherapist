@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Marta Bucholc - Psycholog i Psychoterapeuta Uzależnień. Dowiedz się więcej o psychoterapii i poprawie zdrowia psychicznego."
+    />
+    <title>Marta Bucholc - Psycholog i Psychoterapeuta Uzależnień</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+
+    <style>
+      .offcanvas-body {
+        transition: transform 0.3s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blur-overlay">
+      <div class="background-overlay"></div>
+    </div>
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+      <div class="container">
+        <!-- Toggle Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Sidebar -->
+        <div
+          class="sidebar offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <!-- Sidebar Header -->
+          <div class="offcanvas-header text-white border-bottom">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
+
+            <button
+              type="button"
+              class="btn-close btn-close-white shadown-none"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <!-- Sidebar Body -->
+          <div class="offcanvas-body p-lg-0" id="navbar">
+            <ul
+              class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3"
+            >
+              <li class="nav-item mx-2">
+                <a class="nav-link" aria-current="page" href="/"
+                  >Strona Główna</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="/o-mnie-marta-bucholc">O Mnie</a>
+              </li>
+              <li>
+                <a class="nav-link" href="/dlaczego-terapia-wazna"
+                  >Dlaczego terapia</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="/cennik">Cennik</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="/kontakt">Kontakt</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <div class="wrapper">
+      <div class="main-content main" id="main-content">
+        {% block content %} {% endblock %}
+      </div>
+    </div>
+
+    <footer>&copy; 2024 Marta Bucholc. Wszelkie prawa zastrzeżone.</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      const mainContent = document.getElementById("main");
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 991) {
+          mainContent.style.marginLeft = "240px";
+        } else {
+          mainContent.style.paddingLeft = 0;
+        }
+      });
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Marta Bucholc",
+        "jobTitle": "Psycholog i Psychoterapeuta Uzależnień",
+        "description": "Specjalizuję się w psychoterapii i wspieraniu zdrowia psychicznego.",
+        "url": "https://yourwebsite.com",
+        "image": "https://yourwebsite.com/static/images/profile.jpeg",
+        "sameAs": [
+          "https://www.facebook.com/mbucholc",
+          "https://www.znanylekarz.pl/marta-bucholc/psycholog-psychoterapeuta/warszawa",
+          "https://www.almalibre.pl/marta-bucholc/",
+          "https://www.zaufanyterapeuta.eu/terapeuta/marta-bucholc",
+          "https://www.facebook.com/p/Psychologiczny-Gabinet-100054611163109/",
+          "https://www.znanylekarz.pl/psycholog/warszawa/srodmiescie?page=40",
+          "https://psychoterapiawawa.org.pl/marta-bucholc/"
+        ]
+      }
+    </script>
+  </body>
+</html>
