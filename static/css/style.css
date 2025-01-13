@@ -35,6 +35,10 @@ h1 {
   margin: 30px 0;
 }
 
+h2 {
+  font-size: 7vw + 0.5rem;
+}
+
 a:hover {
   color: goldenrod;
 }
@@ -127,6 +131,15 @@ a:hover {
   gap: 1rem;
   justify-content: center;
 }
+
+/* .grid-container > .card:last-child {
+  grid-column: span 2;
+}
+
+.grid-container > .card {
+  width: 100%;
+  max-width: 600px;
+} */
 /* CENNIK END */
 
 
@@ -172,7 +185,7 @@ a:hover {
 
 .quote {
   font-family: 'raleway', serif;
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1.2rem, 2vw, 2rem);
   font-style: italic;
   color: #fff;
   line-height: 1.8;
@@ -184,7 +197,7 @@ a:hover {
   
   position: relative;
   
-  padding: 20px 40px;
+  padding: 20px 0;
   padding-top: 0 0;
   /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
   z-index: 2;
@@ -207,9 +220,12 @@ footer {
   z-index: 1001;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
   .quote {
-    min-width: 1100px;
+    min-width: 1000px;
+  }
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
 }
 
@@ -220,11 +236,24 @@ footer {
   }
 }
 
+@media (max-width: 800px) {
+  .profile {
+    flex-direction: column;
+  }
+  .card {
+    width: 100vw;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .grid-container > .card:last-child {
+    grid-column: span 1;
+  }
+}
+
 @media (max-width: 320px) {
   .quote {
-    position: fixed;
-    min-width: 300px;
-    padding: 0;
+    display: none;
   }
   .offcanvas .nav-toggler {
     padding-right: 0;
