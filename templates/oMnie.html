@@ -16,6 +16,9 @@
     li {
       font-size: 1.2rem;
     }
+    a:hover {
+      color: goldenrod;
+    }
 
   </style>
 </header>
@@ -26,15 +29,29 @@
     <h2>O Mnie</h2>
     <hr>
     <p>
-      Pracuję jako terapeutka, psycholog od 20 lat. Mama trójki dzieci. Kochająca przyrodę i zwierzęta.
+      Pracuję jako terapeutka, psycholog od 20 lat. Mama trójki dzieci. Kochająca przyrodę i zwierzęta. <hr>
+      <div class="footer-icons" style="display: flex; flex-direction: row; justify-content: center;">
+      <a 
+      href="https://www.znanylekarz.pl/marta-bucholc/"
+      target="_blank"
+      style="text-decoration: none; 
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;"
+      onmouseover="this.style.color = 'goldenrod'"
+      onmouseout="this.style.color='white'"
+      >www.znanylekarz.pl</a>
+        <a href="https://www.znanylekarz.pl/marta-bucholc/psycholog-psychoterapeuta/warszawa" target="_blank">
+          <img src="{{ url_for('static', filename='images/znany_lekarz.png') }}" />
+        </a>
+      </div>
     </p>
   </div>
-
 
   <div class="card">
     <h2>Doświadczenie</h2>
     <hr>
-    <p>Doświadczenie zdobyła w ośrodkach stacjonarnych readaptacyjno-rechabilitacyjnych i poradniach zdrowia psychicznego, obecnie ma własną praktykę w Warszawie.</p>
+    <p>Doświadczenie zdobyłam w ośrodkach stacjonarnych readaptacyjno-rehabilitacyjnych oraz poradniach zdrowia psychicznego, współpracując z prywatnymi gabinetami psychoterapeutycznymi. Obecnie prowadzę własną praktykę.</p>
   </div>
 
   <div class="card">
@@ -50,14 +67,14 @@
   </div>
 
   <div class="card">
-    <h2>Leczę z chorób takich jak</h2>
+    <h2>Pomagam w</h2>
     <hr>
     <ul>
       <li>Zaburzenia lękowe</li>
       <li>Zaburzenia emocjonalne</li>
       <li>Depresja</li>
       <li>Zaburzenia nastroju</li>
-      <li>Uzależnienia i behawioralne</li>
+      <li>Uzależnienia od substancji psychoaktywnych i behawioralnych</li>
     </ul>
   </div>
 
