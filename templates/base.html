@@ -29,6 +29,12 @@
       .offcanvas-body {
         transition: transform 0.3s ease-in-out;
       }
+
+      @media (min-width: 991px) {
+        #znany-navbar-icon {
+          display: none;
+        }
+      }
     </style>
   </head>
   <body>
@@ -93,10 +99,11 @@
               <li class="nav-item mx-2">
                 <a class="nav-link" href="/kontakt">Kontakt</a>
               </li>
+              
             </ul>
-            
           </div>
           <a class="footer-icons"
+          id="znany-navbar-icon"
             href="https://www.znanylekarz.pl/marta-bucholc/psycholog-psychoterapeuta/warszawa" 
             target="_blank"
             style="bottom: 0; justify-content: center; padding-bottom: 1rem;">
